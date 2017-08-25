@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/paper.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/paper.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_btn_send_pressed.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_btn_send_pressed.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_body_nongreen.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_body_nongreen.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_btn_send.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_btn_send.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_del.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/btn_del.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_del_pressed.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/btn_del_pressed.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_head_tran.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_head_tran.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/line_dotted_onclass.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/line_dotted_onclass.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_eraser.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/btn_eraser.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_eraser_pressed.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/btn_eraser_pressed.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/b.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/b.png"
+    }
+]

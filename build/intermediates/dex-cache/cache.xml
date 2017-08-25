@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/server/project/android-sdk-linux/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_3eff98374625df3de205b8b0af5d83326ef80461/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/mnt/one/svn/tuya1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f770b639bfa03219e181d56be7b078489a2baf4e">
+        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/mnt/one/svn/tuya1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3ebce65059b2a085fe72a86e67c3ccedf054948d">
+        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427/classes.dex" />
+    </item>
+
+</items>

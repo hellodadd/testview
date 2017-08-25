@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable/send_ans_bg.xml",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable/send_ans_bg.xml"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable/del_all_bg.xml",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable/del_all_bg.xml"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable/clean_bg.xml",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable/clean_bg.xml"
+    }
+]
