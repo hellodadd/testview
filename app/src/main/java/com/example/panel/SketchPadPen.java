@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.RectF;
 
 import com.example.panel.bean.LineInfo;
 import com.example.panel.bean.SketchDataInfo;
@@ -42,6 +44,17 @@ public class SketchPadPen implements ISketchPadTool
     private float eY = 0.0F;
     private float gX = 0.0F;
     private float gY = 0.0F;
+
+    private Point OldArcPoint = new Point();
+    private Point OldCirclePoint = new Point();
+    private float OldCircleRadius;
+    private float cX = 0.0F;
+    private float cY = 0.0F;
+    private float circleCircleAngle = 0.0F;
+    private float circleLineAngle = 0.0F;
+    private RectF circleRectF = new RectF();
+
+    private String lineText;
     
     public SketchPadPen(int penSize, int penColor)
     {
@@ -251,6 +264,36 @@ public class SketchPadPen implements ISketchPadTool
         }
     }
 
+    public void DrawOneArc(Canvas canvas){
+        Point localPoint1 = new Point();
+        Point localPoint2 = new Point();
+        Point localPoint3 = new Point();
+        localPoint2.x = (int)this.sX;
+        localPoint2.y = (int)this.sY;
+        localPoint3.x = (int)this.eX;
+        localPoint3.y = (int)this.eY;
+
+        if (canvas != null){
+            if ((this.sX == this.eX) && (this.sY == this.eY)) {
+                canvas.drawCircle(this.sX, this.sY, 1 + GRID_WIDTH, this.paintStartOutCircle);
+                //this.sketchPadView.setOneLineComplete("Î´»­Íê");
+            }
+            float f = GetLineLength(this.sX, this.sY, this.eX, this.eY) / 2.0F;
+            Point localPoint4 = Circle_Center2(localPoint2, localPoint3, f, 1);
+            if ((localPoint4.x != 0) || (localPoint4.y != 0))
+            {
+                localPoint1.x = localPoint4.x;
+                localPoint1.y = localPoint4.y;
+                this.circleLineAngle = GetLineAngle(this.sX, this.sY, this.eX, this.eY);
+                this.circleRectF = Circle_Rect(localPoint1, f);
+                this.circleCircleAngle = getCircleAngle(this.sX, this.sY, this.eX, this.eY, f);
+            }
+
+            canvas.drawArc(this.circleRectF, 360.0F - this.circleCircleAngle + this.circleLineAngle, this.circleCircleAngle, false, this.m_penPaint);
+            //this.sketchPadView.setOneLineComplete("»­Íê");
+        }
+    }
+
     private void setPaintMode(Paint paint, int mode){
         if (mode == 0) {
             paint.setPathEffect(new DashPathEffect(new float[] { 20.0F, 7.0F }, 0.0F));
@@ -264,4 +307,63 @@ public class SketchPadPen implements ISketchPadTool
             paint.setStrokeJoin(Paint.Join.ROUND);
         }
     }
+
+    public String getLineText() {
+        return lineText;
+    }
+
+    public void setLineText(String text) {
+        lineText = text;
+    }
+
+    private float GetLineLength(float x1, float y1, float x2, float y2) {
+        return (float)Math.hypot(x1 - x2, y1 - y2);
+    }
+
+    private Point Circle_Center2(Point paramPoint1, Point paramPoint2, double paramDouble, int paramInt) {
+        Point localPoint = new Point();
+        localPoint.set(paramPoint1.x + (paramPoint2.x - paramPoint1.x) / 2, paramPoint1.y + (paramPoint2.y - paramPoint1.y) / 2);
+        return localPoint;
+    }
+
+    private RectF Circle_Rect(Point paramPoint, double paramDouble) {
+        RectF localRectF = new RectF();
+        localRectF.left = (int)(paramPoint.x - paramDouble);
+        localRectF.right = (int)(paramDouble + paramPoint.x);
+        localRectF.top = (int)(paramPoint.y - paramDouble);
+        localRectF.bottom = (int)(paramDouble + paramPoint.y);
+        return localRectF;
+    }
+
+    public float GetLineAngle(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4){
+        double d = Math.atan((paramFloat4 - paramFloat2) / (paramFloat3 - paramFloat1));
+        if ((paramFloat3 >= paramFloat1) && (paramFloat4 >= paramFloat2)) {
+            d = 180.0D * (d / 3.141592653589793D);
+        }else if ((paramFloat3 < paramFloat1) && (paramFloat4 >= paramFloat2)){
+            d = 180.0D + 180.0D * (d / 3.141592653589793D);
+        }else if ((paramFloat3 < paramFloat1) && (paramFloat4 < paramFloat2)){
+            d = 180.0D + 180.0D * (d / 3.141592653589793D);
+        }else if ((paramFloat3 < paramFloat1) || (paramFloat4 >= paramFloat2)){
+            d = 360.0D + 180.0D * (d / 3.141592653589793D);
+        }
+
+        return (float) d;
+    }
+
+    private float getCircleAngle(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, double paramDouble) {
+        double d1 = Math.hypot(paramFloat3 - paramFloat1, paramFloat4 - paramFloat2);
+        double d2 = (paramDouble * paramDouble + paramDouble * paramDouble - d1 * d1) / (paramDouble * (2.0D * paramDouble));
+
+        if (d2 > 1.0D) {
+            d2 = 1.0D;
+        }
+        if (d2 >= -1.0D){
+            d2 = -1.0D;
+        }
+
+        float f = (float)(180.0F * (float)Math.acos(d2) / 3.141592653589793D);
+
+        return f;
+    }
+
 }

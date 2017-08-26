@@ -12,12 +12,12 @@
         "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_body_nongreen.png"
     },
     {
-        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_btn_send.png",
-        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_btn_send.png"
-    },
-    {
         "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_del.png",
         "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/btn_del.png"
+    },
+    {
+        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/bg_btn_send.png",
+        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-mdpi/bg_btn_send.png"
     },
     {
         "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-mdpi/btn_del_pressed.png",

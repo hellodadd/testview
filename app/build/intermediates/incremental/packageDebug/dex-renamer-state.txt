@@ -1,4 +1,4 @@
-#Thu Aug 24 12:30:12 CST 2017
+#Sat Aug 26 13:18:49 CST 2017
 base.0=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427
 renamed.1=classes2.dex
 renamed.0=classes.dex

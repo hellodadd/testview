@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="f770b639bfa03219e181d56be7b078489a2baf4e">
+        sha1="437d3e04d4f3426ff98a9470134b4300afbc3ea7">
         <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2/classes.dex" />
     </item>
     <item
@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="3ebce65059b2a085fe72a86e67c3ccedf054948d">
+        sha1="8e1a2cade708045fecd78fcb6e1291043c016431">
         <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427/classes.dex" />
     </item>
 

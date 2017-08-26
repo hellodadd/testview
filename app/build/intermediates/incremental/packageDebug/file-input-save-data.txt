@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 23 16:08:45 CST 2017
+#Sat Aug 26 13:18:49 CST 2017
 25.file=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2/classes.dex
 25.base=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2
 22.set=ANDROID_RESOURCE
@@ -60,7 +60,7 @@ count=37
 10.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 28.base=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1
 14.set=DEX
-2.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_body_nongreen.png
+2.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_head_tran.png
 2.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 22.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/b.png
 22.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
@@ -75,12 +75,12 @@ count=37
 9.base=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_3eff98374625df3de205b8b0af5d83326ef80461
 35.set=ANDROID_RESOURCE
 18.base=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
-11.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/paper.png
+11.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_btn_send_pressed.png
 29.file=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex
 11.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 29.base=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3
 24.set=ANDROID_RESOURCE
-3.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_head_tran.png
+3.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_body_nongreen.png
 3.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 13.set=ANDROID_RESOURCE
 23.file=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex
@@ -91,7 +91,7 @@ count=37
 18.set=DEX
 19.file=/mnt/one/svn/tuya1/app/build/intermediates/assets/debug/paper.png
 19.base=/mnt/one/svn/tuya1/app/build/intermediates/assets/debug
-12.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_btn_send_pressed.png
+12.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/paper.png
 12.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 4.set=ANDROID_RESOURCE
 34.set=ANDROID_RESOURCE

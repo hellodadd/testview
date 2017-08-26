@@ -1,6 +1,5 @@
 package com.example.panel;
 
-import java.io.Console;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,8 +10,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -20,25 +17,19 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.panel.bean.ArcInfo;
 import com.example.panel.bean.LineInfo;
 import com.example.panel.bean.SketchDataInfo;
 
 
-/**
- * The SketchPadView class provides method to draw strokes on it like as a
- * canvas or sketch pad. We use touch event to draw strokes, when user touch
- * down and touch move, we will remember these point of touch move and set them
- * to a Path object, then draw the Path object, so that user can see the strokes
- * are drawing real time. When touch up event is occurring, we draw the path to
- * a bitmap which is hold by a canvas, and then draw the bitmap to canvas to
- * display these strokes to user.
- * 
- * @author Li Hong
- * 
- * @date 2010/07/30
- * 
- */
+
 public class SketchPadView extends View implements IUndoCommand {
+
+    public static final int DRAW_ARC = 2;
+    public static final int DRAW_LINE = 1;
+    public static final int DRAW_NONE = 0;
+	public static final int DRAW_TEXT = 3;
+
 	public static final int STROKE_NONE = 0;
 	public static final int STROKE_PEN = 1;
 	public static final int STROKE_ERASER = 2;
@@ -79,6 +70,11 @@ public class SketchPadView extends View implements IUndoCommand {
 
     private ArrayList<LineInfo> lineList = new ArrayList();
     private ArrayList<SketchDataInfo> dataList = new ArrayList();
+    private ArrayList<ArcInfo> arcList = new ArrayList();
+
+    private SketchPadPen mPadPen;
+
+    private int paintSwitch = 0;
 
 	public SketchPadView(Context context) {
 		this(context, null);
@@ -104,6 +100,18 @@ public class SketchPadView extends View implements IUndoCommand {
 		super(context, attrs, defStyle);
 		initialize();
 	}
+
+    protected void onDraw(Canvas canvas) {
+        draw(canvas, true);
+    }
+
+    private int getPaintSwitch(){
+        return paintSwitch;
+    }
+
+    private int setPaintSwitch(int type){
+        paintSwitch = type;
+    }
 
 	public boolean isDirty() {
 		return m_isDirty;
@@ -390,77 +398,46 @@ public class SketchPadView extends View implements IUndoCommand {
         return dataList;
     }
 
-    @Override
-	protected void onDraw(Canvas canvas) {
-		// Draw background color.
-		canvas.drawColor(m_bkColor);
 
-		canvas.drawBitmap(m_bkBitmap, 0, 0, null);
-		// Draw background bitmap.
-		if (null != m_bkBitmap) {
-			RectF dst = new RectF(getLeft(), getTop(), getRight(), getBottom());
-			Rect  rst = new Rect(0, 0, m_bkBitmap.getWidth(),
-					m_bkBitmap.getHeight());
-			canvas.drawBitmap(m_bkBitmap, rst, dst, m_bitmapPaint);
-		}
-//
-		if (null != m_foreBitmap) {
-			canvas.drawBitmap(m_foreBitmap, 0, 0, m_bitmapPaint);
-		}
-		if(isfirst){
-			historydo();
-			isfirst = false;
-		}
-//		if (null != m_curTool) {
-//			// Do NOT draw current tool stroke real time if stroke type is NOT
-//			// eraser, because
-//			// eraser is drawn on bitmap hold by m_canvas.
-			if (STROKE_ERASER != m_strokeType) {
-//				// We do NOT draw current tool's stroke to canvas when ACTION_UP
-//				// event is occurring,
-//				// because the stroke has been drawn to bitmap hold by m_canvas.
-//				// But the tool will be
-//				// drawn if undo or redo operation is performed.
-//				canvas.drawBitmap(m_bkBitmap, 0, 0, null);
-//				// Draw background bitmap.
-//				if (null != m_bkBitmap) {
-//					RectF dst = new RectF(getLeft(), getTop(), getRight(), getBottom());
-//					Rect rst = new Rect(0, 0, m_bkBitmap.getWidth(),
-//							m_bkBitmap.getHeight());
-//					canvas.drawBitmap(m_bkBitmap, rst, dst, m_bitmapPaint);
-//				}
-//
+	protected void draw(Canvas canvas, boolean save) {
 
-				if (!m_isTouchUp) {
+        canvas.drawColor(m_bkColor);
 
-						//m_curTool.draw(canvas);
-                    m_curTool.DrawOneLine(canvas);
+        if (null != m_bkBitmap) {
+            RectF dst = new RectF(getLeft(), getTop(), getRight(), getBottom());
+            Rect  rst = new Rect(0, 0, m_bkBitmap.getWidth(), m_bkBitmap.getHeight());
+            canvas.drawBitmap(m_bkBitmap, rst, dst, m_bitmapPaint);
+        }
 
-				}
-			}
-//
-//			}else{
-//				paint = new Paint();
-//				mImgDesRect = new RectF(getLeft(), getTop(), getRight(), getBottom());
-//				int sc = canvas.saveLayer(mImgDesRect.left, mImgDesRect.top,
-//						mImgDesRect.right, mImgDesRect.bottom, null,
-//						Canvas.MATRIX_SAVE_FLAG | Canvas.CLIP_SAVE_FLAG
-//						| Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
-//						| Canvas.FULL_COLOR_LAYER_SAVE_FLAG
-//						| Canvas.CLIP_TO_LAYER_SAVE_FLAG);
-//				paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.XOR));
-//				canvas.drawBitmap(m_bkBitmap, 0, 0, null);
-//				// Draw background bitmap.
-//				if (null != m_bkBitmap) {
-//					RectF dst = new RectF(getLeft(), getTop(), getRight(), getBottom());
-//					Rect rst = new Rect(0, 0, m_bkBitmap.getWidth(),
-//							m_bkBitmap.getHeight());
-//					canvas.drawBitmap(m_bkBitmap, rst, dst, null);
-//				}
-//
-//				if (null != m_foreBitmap) {
-//					canvas.drawBitmap(m_foreBitmap, 0, 0, paint);
-//				}
+        if (null != m_foreBitmap) {
+            canvas.drawBitmap(m_foreBitmap, 0, 0, m_bitmapPaint);
+        }
+
+        if(isfirst){
+            historydo();
+            isfirst = false;
+        }
+
+        if (mPadPen != null) {
+            if ((!m_isTouchUp) && (getPaintSwitch() == 1)) {
+                mPadPen.DrawOneLine(canvas);
+                mPadPen.setLineText("");
+            }
+            if ((!m_isTouchUp) && (getPaintSwitch() == 2)) {
+                mPadPen.DrawOneArc(canvas);
+                mPadPen.setLineText("");
+            }
+
+            /*if ((!m_isTouchUp) && (getPaintSwitch() == 0) && (this.measureMove))
+                this.mPadPen.DrawMoveResult(paramCanvas, this.measure_text.getSelectedText(), this.measureX, this.measureY);
+
+            if ((!m_isTouchUp) && (getPaintSwitch() == 0))
+            {
+                this.mPadPen.DrawMoveLine(paramCanvas);
+                this.mPadPen.DrawMoveArc(paramCanvas);
+            }*/
+        }
+
 
         for(int w = 0; w < gridWidthNum; w++){
             for(int h = 0; h < gridHeightNum; h++){
@@ -471,9 +448,9 @@ public class SketchPadView extends View implements IUndoCommand {
                 canvas.drawRect(l, i1, i2, i3, paintRect);
             }
         }
-	}
-//		}
-//	}
+
+    }
+
 
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -514,11 +491,11 @@ public class SketchPadView extends View implements IUndoCommand {
 	}
 
 	protected void initialize() {
-		m_canvas = new Canvas();
-		m_bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		m_undoStack = new SketchPadUndoStack(this, UNDO_SIZE);
-		// Set stroke type and create a stroke tool.
-		setStrokeType(STROKE_PEN);
+        m_canvas = new Canvas();
+        m_bitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        m_undoStack = new SketchPadUndoStack(this, UNDO_SIZE);
+
+        mPadPen = new SketchPadPen(m_penSize, m_strokeColor, this);
 
         paintRect = new Paint();
         paintRect.setColor(-7829368);

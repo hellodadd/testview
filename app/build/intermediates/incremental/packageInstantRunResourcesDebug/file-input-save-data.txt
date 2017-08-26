@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 23 16:08:41 CST 2017
+#Sat Aug 26 13:18:45 CST 2017
 22.set=ANDROID_RESOURCE
 8.set=ASSET
 11.set=ANDROID_RESOURCE
@@ -7,7 +7,7 @@
 14.base=/mnt/one/svn/tuya1/app/build/intermediates/assets/debug
 16.set=ANDROID_RESOURCE
 count=24
-6.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/btn_eraser_pressed.png
+6.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
 6.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 2.set=ANDROID_RESOURCE
 0.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/btn_eraser.png
@@ -49,7 +49,7 @@ count=24
 18.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/layout/receive.xml
 9.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 18.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
-11.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_btn_send_pressed.png
+11.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/paper.png
 11.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 3.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_head_tran.png
 3.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
@@ -59,7 +59,7 @@ count=24
 18.set=ANDROID_RESOURCE
 19.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable/del_all_bg.xml
 19.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
-12.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/paper.png
+12.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/bg_btn_send_pressed.png
 12.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
 4.set=ANDROID_RESOURCE
 4.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/menu/activity_main.xml
@@ -70,6 +70,6 @@ count=24
 17.set=ASSET
 13.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable/send_ans_bg.xml
 13.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
-5.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
+5.file=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/btn_eraser_pressed.png
 3.set=ANDROID_RESOURCE
 5.base=/mnt/one/svn/tuya1/app/build/intermediates/res/resources-debug.ap_
