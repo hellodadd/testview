@@ -1,7 +1,7 @@
-#Sat Aug 26 13:18:49 CST 2017
-base.0=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427
+#Mon Aug 28 00:54:56 CST 2017
+base.0=/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_288ed34ff2dc0afca2ab6778218abd1e1ad44ab0
 renamed.1=classes2.dex
 renamed.0=classes.dex
-file.1=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2/classes.dex
-base.1=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2
-file.0=/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427/classes.dex
+file.1=/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0003f07da9a3740c9e27692aa6b5a8129fd6df66/classes.dex
+base.1=/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0003f07da9a3740c9e27692aa6b5a8129fd6df66
+file.0=/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_288ed34ff2dc0afca2ab6778218abd1e1ad44ab0/classes.dex

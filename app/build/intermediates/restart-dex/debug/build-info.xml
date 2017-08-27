@@ -5,33 +5,40 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="245877861185216"
-    token="2069448006534640346"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="24059915343888"
+    token="-5310908943325159909"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1227" />
+        duration="143" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="144" />
+        duration="28" />
     <task
         name="verifier"
-        duration="4" />
+        duration="1" />
 
     <artifact
-        location="/mnt/one/svn/tuya1/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="245877861185216"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="23355705472933"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
         <artifact
-            location="/mnt/one/svn/tuya1/app/build/outputs/apk/app-debug.apk"
+            location="/Users/zwb/AndroidStudioProjects/testview/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="24059915343888"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

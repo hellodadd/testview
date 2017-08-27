@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/mnt/one/svn/tuya1/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
-        "source": "/mnt/one/svn/tuya1/app/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/drawable-hdpi/ic_launcher.png"
     }
 ]

@@ -5,4 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
 
+    <string name="new_note">Input the note message</string>
+    <string name="alert_dlg_ok">OK</string>
+    <string name="alert_dlg_cancel">Cancel</string>
+
 </resources>

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/mnt/one/svn/tuya1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+        "outputFile": "/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,14 +11,7 @@
                     "endOffset": 90
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 7,
-                        "startOffset": 226,
-                        "endColumn": 42,
-                        "endOffset": 261
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 129
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 6,
-                        "startOffset": 184,
-                        "endColumn": 40,
-                        "endOffset": 218
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 170
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 99,
-                        "endColumn": 40,
-                        "endOffset": 135
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 211
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 5,
-                        "startOffset": 141,
-                        "endColumn": 41,
-                        "endOffset": 177
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 255
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 43,
-                        "endOffset": 94
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -106,14 +71,7 @@
                     "endOffset": 295
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/color.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 8,
-                        "startOffset": 270,
-                        "endColumn": 43,
-                        "endOffset": 305
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/color.xml"
                 }
             },
             {
@@ -121,17 +79,17 @@
                     "startLine": 8,
                     "startColumn": 4,
                     "startOffset": 300,
-                    "endColumn": 42,
-                    "endOffset": 338
+                    "endColumn": 51,
+                    "endOffset": 347
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/strings.xml",
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 56,
-                        "endColumn": 42,
-                        "endOffset": 94
+                        "startOffset": 308,
+                        "endColumn": 51,
+                        "endOffset": 355
                     }
                 }
             },
@@ -139,18 +97,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 343,
-                    "endColumn": 52,
+                    "startOffset": 352,
+                    "endColumn": 43,
                     "endOffset": 391
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/strings.xml",
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 99,
-                        "endColumn": 52,
-                        "endOffset": 147
+                        "startOffset": 264,
+                        "endColumn": 43,
+                        "endOffset": 303
                     }
                 }
             },
@@ -159,81 +117,93 @@
                     "startLine": 10,
                     "startColumn": 4,
                     "startOffset": 396,
-                    "endColumn": 50,
-                    "endOffset": 442
+                    "endColumn": 42,
+                    "endOffset": 434
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 152,
-                        "endColumn": 50,
-                        "endOffset": 198
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 447,
-                    "endLine": 17,
-                    "endColumn": 12,
-                    "endOffset": 733
+                    "startOffset": 439,
+                    "endColumn": 52,
+                    "endOffset": 487
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/styles.xml",
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 492,
+                    "endColumn": 50,
+                    "endOffset": 538
+                },
+                "from": {
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 543,
+                    "endColumn": 59,
+                    "endOffset": 598
+                },
+                "from": {
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 186,
-                        "endLine": 12,
-                        "endColumn": 12,
-                        "endOffset": 472
+                        "startOffset": 204,
+                        "endColumn": 59,
+                        "endOffset": 259
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 738,
-                    "endLine": 20,
+                    "startOffset": 603,
+                    "endLine": 16,
                     "endColumn": 12,
-                    "endOffset": 893
+                    "endOffset": 681
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/styles.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 510,
-                        "endLine": 17,
-                        "endColumn": 12,
-                        "endOffset": 665
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/styles.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 898,
-                    "endLine": 34,
+                    "startOffset": 686,
+                    "endLine": 19,
                     "endColumn": 12,
-                    "endOffset": 1470
+                    "endOffset": 753
                 },
                 "from": {
-                    "file": "/mnt/one/svn/tuya1/app/src/main/res/values/styles.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 0,
-                        "startOffset": 666,
-                        "endLine": 31,
-                        "endColumn": 12,
-                        "endOffset": 1238
-                    }
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 758,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1247
+                },
+                "from": {
+                    "file": "/Users/zwb/AndroidStudioProjects/testview/app/src/main/res/values/styles.xml"
                 }
             }
         ]

@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/home/server/project/android-sdk-linux/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        jar="/Users/zwb/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_3eff98374625df3de205b8b0af5d83326ef80461/classes.dex" />
+        <dex dex="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_9c96a4d8b9ca49a765937c5e4b5f3928ecd6d8ad/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/mnt/one/svn/tuya1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="437d3e04d4f3426ff98a9470134b4300afbc3ea7">
-        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4516bf29e2cacf71fb21479a9e3b7a8015b0f4b2/classes.dex" />
+        sha1="9fcc7849a9e070619cdfb2279da08a304834e200">
+        <dex dex="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0003f07da9a3740c9e27692aa6b5a8129fd6df66/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/mnt/one/svn/tuya1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="8e1a2cade708045fecd78fcb6e1291043c016431">
-        <dex dex="/mnt/one/svn/tuya1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9a92bdcff37abb72d4a7c946cd87168b61431427/classes.dex" />
+        sha1="94fed12744d5121daba619af909e84bbe6c10464">
+        <dex dex="/Users/zwb/AndroidStudioProjects/testview/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_288ed34ff2dc0afca2ab6778218abd1e1ad44ab0/classes.dex" />
     </item>
 
 </items>

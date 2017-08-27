@@ -19,6 +19,7 @@ import android.view.View;
 
 import com.example.panel.bean.ArcInfo;
 import com.example.panel.bean.LineInfo;
+import com.example.panel.bean.NoteInfo;
 import com.example.panel.bean.SketchDataInfo;
 
 
@@ -38,6 +39,7 @@ public class SketchPadView extends View implements IUndoCommand {
 	private boolean m_isEnableDraw = true;
 	private boolean m_isDirty = false;
 	private boolean m_isTouchUp = false;
+    private boolean m_isTouchMove = false;
 	private boolean m_isSetForeBmp = false;
 	private int m_bkColor = Color.WHITE;
 
@@ -71,10 +73,15 @@ public class SketchPadView extends View implements IUndoCommand {
     private ArrayList<LineInfo> lineList = new ArrayList();
     private ArrayList<SketchDataInfo> dataList = new ArrayList();
     private ArrayList<ArcInfo> arcList = new ArrayList();
+    private ArrayList<NoteInfo> noteList = new ArrayList();
 
     private SketchPadPen mPadPen;
 
-    private int paintSwitch = 0;
+    private int paintSwitch = 3;
+
+    private String operateStatusString = "";
+
+    private ReceiveActivity measureActivity;
 
 	public SketchPadView(Context context) {
 		this(context, null);
@@ -109,8 +116,14 @@ public class SketchPadView extends View implements IUndoCommand {
         return paintSwitch;
     }
 
-    private int setPaintSwitch(int type){
+    private void setPaintSwitch(int type){
         paintSwitch = type;
+    }
+
+    public void setMeasureActivity(ReceiveActivity activity) {
+        Log.e("zwb", "settt ----" + activity);
+        this.measureActivity = activity;
+        Log.e("zwb", "settt -5555---" + measureActivity);
     }
 
 	public boolean isDirty() {
@@ -308,7 +321,7 @@ public class SketchPadView extends View implements IUndoCommand {
 	}
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		if (null != m_callback) {
+		/*if (null != m_callback) {
 			int action = event.getAction();
 			if (MotionEvent.ACTION_DOWN == action) {
 				m_callback.onTouchDown(this, event);
@@ -364,12 +377,126 @@ public class SketchPadView extends View implements IUndoCommand {
 
 				break;
 			}
+
 		}
 
 		// Here must return true if enable to draw, otherwise the stroke may NOT
 		// be drawn.
 		return true;
+		*/
+
+        if(getPaintSwitch() == 1){
+            drawLine(event);
+        }else if(getPaintSwitch() == 2){
+            drawArc(event);
+        }else if(getPaintSwitch() == 3){
+            drawNote(event);
+        }
+        return  true;
 	}
+
+	private void drawLine(MotionEvent event){
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN: {
+                set_TouchUp(false);
+                set_TouchMove(false);
+                setOperateStatus("Paint Line");
+                mPadPen.touchDown(event.getX(), event.getY());
+                invalidate();
+                break;
+            }
+            case MotionEvent.ACTION_MOVE:{
+                set_TouchUp(false);
+                set_TouchMove(true);
+                mPadPen.touchMove(event.getX(), event.getY());
+                invalidate();
+                break;
+            }
+            case MotionEvent.ACTION_UP:{
+                set_TouchUp(true);
+                set_TouchMove(false);
+                mPadPen.touchUp(event.getX(), event.getY());
+                mPadPen.DrawOneLine(m_canvas);
+                invalidate();
+                addOneLine();
+                redo();
+                break;
+            }
+        }
+	}
+
+    private void drawArc(MotionEvent event){
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN: {
+                set_TouchUp(false);
+                set_TouchMove(false);
+                setOperateStatus("Paint Arc");
+                mPadPen.touchDown(event.getX(), event.getY());
+                invalidate();
+                break;
+            }
+            case MotionEvent.ACTION_MOVE:{
+                set_TouchMove(true);
+                set_TouchUp(false);
+                mPadPen.touchMove(event.getX(), event.getY());
+                invalidate();
+                break;
+            }
+            case MotionEvent.ACTION_UP:{
+                set_TouchUp(true);
+                set_TouchMove(false);
+                mPadPen.touchUp(event.getX(),event.getY());
+                mPadPen.DrawOneArc(m_canvas);
+                invalidate();
+                redo();
+                break;
+            }
+        }
+    }
+
+    private void drawNote(MotionEvent event){
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN: {
+                set_TouchMove(false);
+                set_TouchUp(false);
+                setOperateStatus("Paint Text");
+                mPadPen.touchDown(event.getX(), event.getY());
+                invalidate();
+                break;
+            }
+            case MotionEvent.ACTION_MOVE:{
+                set_TouchMove(true);
+                set_TouchUp(false);
+                mPadPen.touchMove(event.getX(), event.getY());
+                break;
+            }
+            case MotionEvent.ACTION_UP:{
+                set_TouchMove(false);
+                set_TouchUp(true);
+                Log.e("zwb","----ativity = " + measureActivity);
+                measureActivity.AddOneNote(this.mPadPen.getsX(), this.mPadPen.getsY());
+                break;
+            }
+        }
+    }
+
+    public void set_TouchMove(boolean paramBoolean)
+    {
+        m_isTouchMove = paramBoolean;
+    }
+
+    public void set_TouchUp(boolean paramBoolean)
+    {
+        m_isTouchUp = paramBoolean;
+    }
+
+    public void setOperateStatus(String drawstatus) {
+        operateStatusString = drawstatus;
+    }
+
+    public String getOperateStatus() {
+        return operateStatusString;
+    }
 
 	protected void setCanvasSize(int width, int height) {
 		if (width > 0 && height > 0) {
@@ -396,6 +523,14 @@ public class SketchPadView extends View implements IUndoCommand {
 
     public ArrayList<SketchDataInfo> getDataList() {
         return dataList;
+    }
+
+    public ArrayList<ArcInfo> getArcList() {
+        return arcList;
+    }
+
+    public ArrayList<NoteInfo> getNoteList() {
+        return this.noteList;
     }
 
 
@@ -612,8 +747,8 @@ public class SketchPadView extends View implements IUndoCommand {
             SketchPadPen sketchPadPen = new SketchPadPen(SketchPadView.this.m_penSize,
                     SketchPadView.this.m_strokeColor, this.m_sketchPad);
             sketchPadPen.DrawFinishLine(canvas, SketchPadView.this.lineList);
-            //sketchPadPen.DrawFinishArc(canvas, -1, SketchPadView.this.arcList);
-            //sketchPadPen.DrawFinishNote(canvas);
+            sketchPadPen.DrawFinishArc(canvas, -1, SketchPadView.this.arcList);
+            sketchPadPen.DrawFinishNote(canvas);
             m_sketchPad.invalidate();
         }
 

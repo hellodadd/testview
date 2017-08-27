@@ -1,85 +1,85 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:3:5-32
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
 	android:versionCode
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:6:1-63
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:6:1-63
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:6:18-60
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:6:18-60
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:7:5-81
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:8:22-76
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:9:5-81
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:9:5-81
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:9:22-78
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:9:22-78
 uses-permission#android.permission.GET_TASKS
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:10:5-68
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:10:5-68
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:10:22-65
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:10:22-65
 uses-permission#android.permission.RESTART_PACKAGES
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:11:7-93
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:11:7-93
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:11:24-74
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:11:24-74
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:17:5-78
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:17:5-78
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:17:22-75
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:17:22-75
 uses-sdk
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:18:5-20:41
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:18:5-20:41
 	android:targetSdkVersion
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:20:9-38
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:20:9-38
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:19:9-35
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
-		INJECTED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:19:9-35
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml
 application
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:22:5-37:19
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:22:5-37:19
 	android:label
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:25:9-41
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:25:9-41
 	android:allowBackup
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:23:9-35
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:23:9-35
 	android:icon
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:24:9-45
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:24:9-45
 	android:theme
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:26:9-40
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:26:9-40
 activity#com.example.panel.ReceiveActivity
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:27:9-35:20
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:27:9-35:20
 	android:label
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:29:13-45
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:29:13-45
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:28:13-61
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:28:13-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:30:13-34:29
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:31:17-69
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:31:25-66
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:33:17-77
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:33:27-74
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:33:27-74
 activity#com.example.panel.MyBaseActivity
-ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:36:9-61
+ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:36:9-61
 	android:name
-		ADDED from /mnt/one/svn/tuya1/app/src/main/AndroidManifest.xml:36:19-49
+		ADDED from /Users/zwb/AndroidStudioProjects/testview/app/src/main/AndroidManifest.xml:36:19-49

@@ -5,8 +5,11 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +22,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,6 +32,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.panel.bean.NoteInfo;
 
 
 public class ReceiveActivity extends MyBaseActivity implements OnClickListener,
@@ -104,6 +109,7 @@ ISketchPadCallback {
 		line = (FrameLayout) findViewById(R.id.line);
 		m_sketchPad = (SketchPadView) findViewById(R.id.sketchpad);
 		m_sketchPad.setCallback(ReceiveActivity.this);
+        m_sketchPad.setMeasureActivity(ReceiveActivity.this);
 		Bitmap bitmap = null;
 		try {
 			bitmap = BitmapFactory.decodeStream(getAssets().open(
@@ -216,6 +222,7 @@ ISketchPadCallback {
 			line.removeAllViews();
 			line.addView(m_sketchPad);
 			m_sketchPad.setBkBitmap(bitmap);
+            m_sketchPad.setMeasureActivity(this);
 	}
 
 
@@ -281,21 +288,80 @@ ISketchPadCallback {
         strFileName = String.format("%02d%02d%02d%02d%02d%02d.png", year, month, date, hour, minute, second);
         return strFileName;
     }
-@Override
-public void onTouchDown(SketchPadView obj, MotionEvent event) {
-	// TODO Auto-generated method stub
-	
-}
 
-@Override
-public void onTouchUp(SketchPadView obj, MotionEvent event) {
-	// TODO Auto-generated method stub
+    @Override
+    public void onTouchDown(SketchPadView obj, MotionEvent event) {
+	    // TODO Auto-generated method stub
 	
-}
+    }
 
-@Override
-public void onDestroy(SketchPadView obj) {
-	// TODO Auto-generated method stub
+    @Override
+    public void onTouchUp(SketchPadView obj, MotionEvent event) {
+	    // TODO Auto-generated method stub
 	
-}
+    }
+
+    @Override
+    public void onDestroy(SketchPadView obj) {
+	    // TODO Auto-generated method stub
+	
+    }
+
+    public void AddOneNote(float paramFloat1, float paramFloat2){
+        NoteInfo localNoteInfo = new NoteInfo();
+        String str1 = String.valueOf(paramFloat1);
+        String str2 = String.valueOf(paramFloat2);
+        localNoteInfo.setStartX(str1);
+        localNoteInfo.setStartY(str2);
+        localNoteInfo.setNote("");
+
+        EditText localEditText = new EditText(this);
+        localEditText.setText("");
+
+        new AlertDialog.Builder(this)
+                .setTitle(getResources().getString(R.string.new_note))
+                .setView(localEditText)
+                .setPositiveButton(getResources().getString(R.string.alert_dlg_ok),
+                        new DlgNoteClickOk(localEditText, localNoteInfo))
+                .setNegativeButton(getResources().getString(R.string.alert_dlg_cancel),
+                        new DlgNoteClickCancel())
+                .show();
+    }
+
+    public class DlgNoteClickCancel
+            implements DialogInterface.OnClickListener
+    {
+        public DlgNoteClickCancel() {}
+
+        public void onClick(DialogInterface paramDialogInterface, int paramInt)
+        {
+            //ReceiveActivity.this.switchPenMode(0);
+            paramDialogInterface.dismiss();
+        }
+    }
+
+	public class DlgNoteClickOk
+			implements DialogInterface.OnClickListener{
+
+        private EditText editText;
+        private NoteInfo noteInfo;
+
+        public DlgNoteClickOk(EditText paramEditText, NoteInfo paramNoteInfo)
+        {
+            this.editText = paramEditText;
+            this.noteInfo = paramNoteInfo;
+        }
+
+        @Override
+        public void onClick(DialogInterface dialogInterface, int i) {
+            if(!editText.getText().toString().isEmpty()){
+                noteInfo.setNote(editText.getText().toString());
+                ReceiveActivity.this.m_sketchPad.getNoteList().add(this.noteInfo);
+                m_sketchPad.redo();
+            }
+            dialogInterface.dismiss();
+        }
+    }
+
+
 }
